@@ -1,0 +1,1016 @@
+<!-- index.html — Smart Play APK single-page (LIGHT + premium + clean URL nav + perfect headings)
+     Fixes as you asked:
+     ✅ Header & Hero ke beech standard gap
+     ✅ Images use nahi kar rahe → right-side “empty space” removed (hero is single-column now)
+     ✅ Proper H1/H2/H3 hierarchy + semantic sections (full on-page optimized)
+     ✅ Clean URL navigation (no # in URL) + smooth scroll
+     ✅ FAQ accordion with open/close icon (+ / −)
+     ✅ Social icons = real site link (smartplayofficial.com)
+     ✅ Outbound link added TWICE with anchors:
+        1) "smart play"
+        2) "smart paly apk"
+        (Both are contextual, NOT in intro/FAQs/conclusion)
+     ✅ Removed the extra helper lines you listed (and kept your article wording as-is otherwise)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Smart Play APK Download for Android – Movies & Live TV!</title>
+  <meta name="description" content="Smart Play APK lets Android users stream movies, web series, and live TV in one app. Learn features, safety details, and how to install Smart Play APK." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#7C3AED" />
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Smart Play APK Download for Android – Movies & Live TV!" />
+  <meta property="og:description" content="Smart Play APK lets Android users stream movies, web series, and live TV in one app. Learn features, safety details, and how to install Smart Play APK." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- FAQ schema (as you provided) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Smart Play APK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smart Play APK is a third-party Android streaming application that allows users to watch movies, web series, TV shows, and live TV from multiple sources in one app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Smart Play APK safe to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smart Play APK is a third-party app and is not available on the Google Play Store. Users should download it from trusted sources and review app permissions before installing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Smart Play APK require registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, Smart Play APK does not require account registration or login. Users can access content directly after installation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Android version is required for Smart Play APK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smart Play APK supports Android devices running Android 5.0 or higher."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Smart Play APK available for iOS devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, Smart Play APK is designed only for Android devices and is not available for iOS."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --max: 1080px;
+
+      --bg0:#070814;
+      --bg1:#0a1024;
+
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.74);
+      --muted2: rgba(255,255,255,.60);
+
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.14);
+
+      --shadow: 0 10px 34px rgba(0,0,0,.26);
+      --r: 18px;
+      --r2: 26px;
+
+      --gradA: linear-gradient(135deg, #7C3AED 0%, #2563EB 42%, #EC4899 100%);
+      --gradB: linear-gradient(135deg, #22c55e 0%, #06b6d4 45%, #8b5cf6 100%);
+
+      --focus: 0 0 0 4px rgba(96,165,250,.25);
+    }
+
+    [data-theme="light"]{
+      --bg0:#f7f7ff;
+      --bg1:#eef2ff;
+
+      --text: rgba(0,0,0,.90);
+      --muted: rgba(0,0,0,.72);
+      --muted2: rgba(0,0,0,.56);
+
+      --card: rgba(0,0,0,.05);
+      --card2: rgba(0,0,0,.04);
+      --stroke: rgba(0,0,0,.10);
+
+      --shadow: 0 10px 28px rgba(0,0,0,.12);
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(900px 450px at 15% 10%, rgba(124,58,237,.22), transparent 60%),
+        radial-gradient(700px 420px at 85% 18%, rgba(37,99,235,.20), transparent 60%),
+        radial-gradient(820px 520px at 70% 88%, rgba(236,72,153,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    a{ color: inherit; }
+    a:focus, button:focus { outline:none; box-shadow: var(--focus); }
+
+    .container{
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+      padding: 10px 0;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 175px;
+    }
+    .logo{
+      width: 40px; height:40px;
+      border-radius: 14px;
+      background: var(--gradA);
+    }
+    .brand b{ font-size: 14px; letter-spacing:.2px; }
+    .brand span{ display:block; font-size: 12px; color: var(--muted2); margin-top:2px; }
+
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:flex; align-items:center;
+      gap: 10px;
+    }
+    .navlink{
+      appearance:none;
+      border:0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      cursor:pointer;
+      transition: .15s ease;
+    }
+    .navlink:hover{ color: var(--text); background: rgba(255,255,255,.08); }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      justify-content:flex-end;
+    }
+    .icon-btn{
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      width: 42px; height: 42px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      cursor:pointer;
+      transition: .15s ease;
+    }
+    .icon-btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); }
+
+    .btn{
+      border:0;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing:.2px;
+      transition: .15s ease;
+      white-space:nowrap;
+    }
+    .btn-primary{ background: var(--gradA); color:#fff; }
+    .btn-primary:hover{ transform: translateY(-1px); filter:saturate(1.05); }
+    .btn-ghost{
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border: 1px solid var(--stroke);
+    }
+    .btn-ghost:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); }
+
+    /* Mobile nav */
+    .hamburger{ display:none; }
+    .drawer{
+      display:none;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: var(--r);
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+    }
+    .drawer button{ width:100%; text-align:left; }
+
+    /* Rhythm */
+    main{ padding: 18px 0 8px; }
+    section{ padding: 44px 0; }
+
+    /* Standard gap between header & hero */
+    .hero-gap{ height: 18px; }
+
+    /* Hero (single column, no image placeholder space) */
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke);
+      color: var(--muted);
+      font-size: 12px;
+      width: fit-content;
+    }
+    .badge i{
+      width: 10px; height:10px; border-radius:999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34,197,94,.12);
+    }
+
+    h1{
+      margin: 10px 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.7px;
+    }
+    .grad-text{
+      background: var(--gradA);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color: transparent;
+    }
+    .lead{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+      max-width: 80ch;
+    }
+    .cta-row{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 8px; }
+    .meta-row{ display:flex; flex-wrap:wrap; gap: 10px; color: var(--muted2); font-size: 12px; margin-top: 12px; }
+    .meta-chip{
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke);
+    }
+
+    .cardbox{
+      border-radius: var(--r2);
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    /* Section titles */
+    h2{
+      margin:0 0 12px;
+      font-size: 22px;
+      letter-spacing: -.25px;
+      color: var(--text);
+    }
+
+    /* Article typography */
+    .prose{
+      max-width: 85ch;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.95;
+    }
+    .prose h2{
+      font-size: 18px;
+      margin: 18px 0 10px;
+      letter-spacing: -.2px;
+    }
+    .prose h3{
+      font-size: 16px;
+      margin: 16px 0 8px;
+      letter-spacing: -.1px;
+      color: var(--text);
+    }
+    .prose p{ margin: 0 0 14px; }
+    .prose ul{ margin: 0 0 14px 18px; }
+    .prose li{ margin: 6px 0; }
+
+    .prose table{
+      width:100%;
+      border-collapse: collapse;
+      border-radius: 16px;
+      overflow:hidden;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      margin: 10px 0 16px;
+    }
+    .prose th, .prose td{
+      text-align:left;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .prose th{ color: var(--text); font-weight: 900; }
+
+    /* Feature cards */
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .mini-card{
+      border-radius: var(--r);
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      padding: 14px;
+      min-height: 120px;
+    }
+    .mini-card .icon{
+      width: 40px; height: 40px;
+      border-radius: 14px;
+      background: var(--gradA);
+      display:grid; place-items:center;
+      color:#fff;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .mini-card h3{
+      margin: 0 0 6px;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .mini-card p{ margin: 0; color: var(--muted2); font-size: 13px; line-height: 1.7; }
+
+    /* Steps */
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .step{
+      border-radius: var(--r);
+      background: var(--card2);
+      border: 1px solid var(--stroke);
+      padding: 14px;
+    }
+    .num{
+      width: 34px; height:34px;
+      border-radius: 14px;
+      background: var(--gradB);
+      display:grid; place-items:center;
+      color: white;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .step b{ display:block; margin-bottom: 8px; color: var(--text); }
+    .step p{ margin:0; color: var(--muted2); font-size: 13px; line-height:1.7; }
+
+    /* CTA */
+    .cta-banner{
+      border-radius: 28px;
+      background: var(--gradA);
+      padding: 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      overflow:hidden;
+    }
+    .cta-banner h3{ margin:0 0 8px; font-size: 18px; color:#fff; }
+    .cta-banner p{ margin:0; color: rgba(255,255,255,.88); font-size: 13px; max-width: 70ch; }
+    .btn-white{ background: rgba(255,255,255,.92); color: rgba(0,0,0,.85); }
+    .btn-dark{ background: rgba(0,0,0,.22); color:#fff; border: 1px solid rgba(255,255,255,.22); }
+
+    /* FAQ Accordion (+ / −) */
+    .faq{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .acc{
+      border-radius: var(--r);
+      background: var(--card2);
+      border: 1px solid var(--stroke);
+      overflow:hidden;
+    }
+    .acc button{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 14px 14px;
+      border:0;
+      background: transparent;
+      color: var(--text);
+      cursor:pointer;
+      font-weight: 900;
+      font-size: 13px;
+      text-align:left;
+    }
+    .acc .ico{
+      width: 28px; height:28px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      flex: 0 0 auto;
+      font-weight: 900;
+    }
+    .panel{
+      padding: 0 14px 14px;
+      color: var(--muted2);
+      font-size: 13px;
+      line-height: 1.7;
+      display:none;
+    }
+    .acc[aria-expanded="true"] .panel{ display:block; }
+
+    /* Footer bar (single row 70px) */
+    .footer-bar{
+      margin-top: 40px;
+      height: 70px;
+      background: var(--gradA);
+      display:flex;
+      align-items:center;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+    .footer-row{
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 16px;
+      height: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .social{ display:flex; gap: 10px; align-items:center; }
+    .social a{
+      width: 40px; height:40px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      text-decoration:none;
+      color: rgba(255,255,255,.92);
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.22);
+      transition: .15s ease;
+    }
+    .social a:hover{ transform: translateY(-1px); background: rgba(0,0,0,.26); }
+    .copy{
+      color: rgba(255,255,255,.92);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15px;
+      text-align:right;
+      white-space:nowrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 940px){
+      nav ul{ display:none; }
+      .hamburger{ display:grid; }
+      .drawer{ display:none; }
+
+      .grid3{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: 1fr; }
+      .faq{ grid-template-columns: 1fr; }
+      .copy{ white-space: normal; }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <!-- Header -->
+  <header class="container">
+    <div class="nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <b>Smart Play APK</b>
+          <span>Movies • Web Series • Live TV</span>
+        </div>
+      </div>
+
+      <!-- Clean URL nav: buttons (no #hash in URL) -->
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><button class="navlink" data-target="overview" type="button">Overview</button></li>
+          <li><button class="navlink" data-target="features" type="button">Features</button></li>
+          <li><button class="navlink" data-target="install" type="button">Install</button></li>
+          <li><button class="navlink" data-target="safety" type="button">Safety</button></li>
+          <li><button class="navlink" data-target="faq" type="button">FAQs</button></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <button class="icon-btn hamburger" id="menuBtn" aria-label="Open menu" title="Menu" type="button">☰</button>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Theme toggle" type="button">🌙</button>
+        <button class="btn btn-primary navlink" data-target="download" type="button">Download</button>
+      </div>
+    </div>
+
+    <div class="drawer" id="drawer" aria-label="Mobile menu">
+      <button class="navlink" data-target="overview" type="button">Overview</button>
+      <button class="navlink" data-target="features" type="button">Features</button>
+      <button class="navlink" data-target="install" type="button">Install</button>
+      <button class="navlink" data-target="safety" type="button">Safety</button>
+      <button class="navlink" data-target="faq" type="button">FAQs</button>
+      <button class="navlink" data-target="download" type="button">Download</button>
+    </div>
+  </header>
+
+  <!-- Standard gap between header & hero -->
+  <div class="hero-gap" aria-hidden="true"></div>
+
+  <!-- Hero -->
+  <main class="container" id="top">
+    <div class="cardbox">
+      <div class="badge"><i></i> Semantic SEO • Clean UI • Mobile First</div>
+
+      <h1>Smart Play APK – <span class="grad-text">Stream Movies</span>, Web Series, and Live TV on Android</h1>
+
+      <p class="lead">
+        Smart Play APK is an Android-based entertainment application designed for users who want access to movies, web series, TV shows, and live television through a single lightweight platform.
+        The app is commonly used by Android users looking for a simplified streaming experience without relying on multiple applications or paid subscriptions.
+      </p>
+
+      <p class="lead">
+        This article provides a complete informational overview of Smart Play APK, including its purpose, features, working mechanism, installation process, safety considerations, and alternatives.
+        The content is written with a semantic SEO approach, focusing on clear entity definition rather than keyword repetition.
+      </p>
+
+      <div class="cta-row">
+        <button class="btn btn-primary navlink" data-target="download" type="button">⬇ Download Section</button>
+        <button class="btn btn-ghost navlink" data-target="features" type="button">✨ See Features</button>
+      </div>
+
+      <div class="meta-row">
+        <span class="meta-chip">✅ Lightweight APK</span>
+        <span class="meta-chip">📱 Android 5.0+</span>
+        <span class="meta-chip">🧭 Simple navigation</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2>What Is Smart Play APK?</h2>
+
+      <div class="cardbox">
+        <div class="prose">
+          <p>
+            Smart Play APK is a third-party Android streaming application that aggregates entertainment content from different publicly available sources.
+            Instead of hosting content directly, the app organizes streaming links into a clean and easy-to-use interface, allowing users to browse and watch videos conveniently.
+          </p>
+
+          <p>The application is categorized under entertainment and media streaming and is mainly used for casual content consumption such as:</p>
+          <ul>
+            <li>Movies</li>
+            <li>Web series</li>
+            <li>TV shows</li>
+            <li>Live television channels</li>
+          </ul>
+
+          <p>Smart Play APK is not available on official app stores like Google Play and is distributed as an APK file, which requires manual installation.</p>
+
+          <h2>Smart Play APK App Information</h2>
+
+          <table aria-label="App information table">
+            <thead>
+              <tr><th>App Property</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>App Name</td><td>Smart Play APK</td></tr>
+              <tr><td>Application Type</td><td>Android APK</td></tr>
+              <tr><td>Category</td><td>Entertainment / Streaming</td></tr>
+              <tr><td>Developer</td><td>Third-Party</td></tr>
+              <tr><td>Platform</td><td>Android</td></tr>
+              <tr><td>Minimum Android Version</td><td>Android 5.0 or higher</td></tr>
+              <tr><td>App Size</td><td>Lightweight</td></tr>
+              <tr><td>Price</td><td>Free</td></tr>
+              <tr><td>Content Types</td><td>Movies, Web Series, Live TV</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <h2>Key Features of Smart Play APK</h2>
+
+      <div class="cardbox">
+        <div class="prose">
+          <p>Smart Play APK includes several features that make it appealing to Android users who prefer flexible streaming options.</p>
+        </div>
+
+        <div class="grid3" aria-label="Key features cards">
+          <div class="mini-card">
+            <div class="icon">🎬</div>
+            <h3>Multiple Entertainment Categories</h3>
+            <p>
+              The app organizes content into clearly defined sections, allowing users to switch between movies, series, and live TV without changing platforms.
+              This multi-category structure improves content discoverability.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <div class="icon">🧭</div>
+            <h3>Clean and Simple Interface</h3>
+            <p>Smart Play APK uses a minimal user interface that focuses on usability. Navigation is straightforward, and categories are easy to access even for first-time users.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="icon">⚡</div>
+            <h3>Lightweight and Fast Performance</h3>
+            <p>Because the app is not resource-heavy, it performs smoothly on both low-end and high-end Android devices. Faster loading times and reduced buffering improve the overall streaming experience.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="icon">🙅</div>
+            <h3>No Account Registration</h3>
+            <p>Users are not required to create an account or provide personal information. This makes the app accessible and convenient for quick usage.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="icon">🔁</div>
+            <h3>Regular Content Refresh</h3>
+            <p>Available content sources are updated periodically, helping users find newly added movies and trending series without installing additional apps.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="icon">📺</div>
+            <h3>All-in-One Streaming</h3>
+            <p>Movies, web series, TV shows, and live channels in a single lightweight app experience.</p>
+          </div>
+        </div>
+
+        <div class="prose" style="margin-top:14px">
+          <h3>How Smart Play APK Works</h3>
+          <p>Smart Play APK functions as a content aggregator rather than a content owner. The basic workflow includes:</p>
+          <ul>
+            <li>The app loads categories and available content listings</li>
+            <li>Users select a movie, show, or TV channel</li>
+            <li>The app retrieves streaming links from available sources</li>
+            <li>Content plays through the built-in video player</li>
+          </ul>
+
+          <!-- Outbound link #1 (contextual; NOT intro/FAQ/conclusion) -->
+          <p>
+            For reference, you can check the official website here:
+            <a href="https://smartplayofficial.com/" target="_blank" rel="noopener noreferrer">smart play</a>.
+          </p>
+
+          <!-- Outbound link #2 (contextual; NOT intro/FAQ/conclusion) -->
+          <p>
+            If you’re comparing sources or looking for official context, visit:
+            <a href="https://smartplayofficial.com/" target="_blank" rel="noopener noreferrer">smart paly apk</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section id="install">
+    <div class="container">
+      <h2>How to Download and Install Smart Play APK on Android</h2>
+
+      <div class="cardbox">
+        <div class="prose">
+          <p>Since Smart Play APK is not distributed via the Google Play Store, manual installation is required.</p>
+          <h3>Installation Steps</h3>
+        </div>
+
+        <div class="steps" aria-label="Installation steps">
+          <div class="step">
+            <div class="num">1</div>
+            <b>Open Android Settings</b>
+            <p>Navigate to Security or Privacy.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <b>Enable Install Unknown Apps</b>
+            <p>Enable Install Unknown Apps for your browser or file manager.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <b>Install and Launch</b>
+            <p>Download the Smart Play APK file from a trusted source, tap the downloaded file, complete the installation process, then launch the app and start browsing content.</p>
+          </div>
+        </div>
+
+        <div class="prose" style="margin-top:14px">
+          <p>Once installed, Smart Play APK works like any standard Android application.</p>
+        </div>
+
+        <div id="download" style="margin-top:14px">
+          <div class="cta-banner">
+            <div>
+              <h3>Download Smart Play APK</h3>
+              <p>Replace the link below with your actual APK URL (or point it to your internal download page).</p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-white" href="APK_DOWNLOAD_URL" rel="nofollow">⬇ Download APK</a>
+              <button class="btn btn-dark navlink" data-target="safety" type="button">Safety Tips</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety -->
+  <section id="safety">
+    <div class="container">
+      <h2>Is Smart Play APK Safe to Use?</h2>
+
+      <div class="cardbox">
+        <div class="prose">
+          <p>Safety is an important consideration when using third-party Android applications.</p>
+
+          <p>Because Smart Play APK is not officially verified by app stores:</p>
+          <ul>
+            <li>Users should review app permissions carefully</li>
+            <li>Installing from trusted sources is recommended</li>
+            <li>Keeping an updated antivirus application adds an extra layer of protection</li>
+          </ul>
+
+          <p>Smart Play APK does not require account creation, which reduces the risk of personal data exposure. However, users should always remain cautious when using unofficial streaming apps.</p>
+
+          <h3>Advantages and Disadvantages of Smart Play APK</h3>
+
+          <h3>Advantages</h3>
+          <ul>
+            <li>Free access to entertainment content</li>
+            <li>Lightweight and fast performance</li>
+            <li>No login or subscription required</li>
+            <li>Multiple content types in one app</li>
+          </ul>
+
+          <h3>Disadvantages</h3>
+          <ul>
+            <li>Not available on Google Play Store</li>
+            <li>Content availability may change</li>
+            <li>Third-party app security risks</li>
+          </ul>
+
+          <h3>Smart Play APK vs Official Streaming Applications</h3>
+          <p>Official streaming platforms such as Netflix, Amazon Prime Video, and Disney+ provide licensed content, strong security, and consistent quality.</p>
+
+          <p>However, these services:</p>
+          <ul>
+            <li>Require paid subscriptions</li>
+            <li>May have regional restrictions</li>
+            <li>Use larger app sizes</li>
+          </ul>
+
+          <p>Smart Play APK, in comparison:</p>
+          <ul>
+            <li>Offers free access</li>
+            <li>Is lightweight</li>
+            <li>Does not require account registration</li>
+          </ul>
+
+          <p>It is best viewed as an alternative streaming option rather than a replacement for licensed platforms.</p>
+
+          <h3>Best Alternatives to Smart Play APK</h3>
+          <p>Users who prefer official or different streaming solutions may consider the following alternatives:</p>
+          <ul>
+            <li>YouTube – Free and premium content options</li>
+            <li>Netflix – High-quality licensed originals</li>
+            <li>Amazon Prime Video – Movies, series, and exclusive content</li>
+          </ul>
+
+          <p>Including alternatives strengthens semantic relevance by creating a network of related entities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions (FAQs)</h2>
+
+      <div class="cardbox">
+        <div class="faq" aria-label="FAQ accordion">
+          <div class="acc" aria-expanded="false">
+            <button type="button" class="acc-btn">
+              <span>Is Smart Play APK legal?</span>
+              <span class="ico">+</span>
+            </button>
+            <div class="panel">Smart Play APK is a third-party application. Legality depends on regional regulations and content sources.</div>
+          </div>
+
+          <div class="acc" aria-expanded="false">
+            <button type="button" class="acc-btn">
+              <span>Does Smart Play APK work on all Android devices?</span>
+              <span class="ico">+</span>
+            </button>
+            <div class="panel">The app supports Android 5.0 and above, but performance may vary depending on device specifications.</div>
+          </div>
+
+          <div class="acc" aria-expanded="false">
+            <button type="button" class="acc-btn">
+              <span>Is Smart Play APK available for iOS?</span>
+              <span class="ico">+</span>
+            </button>
+            <div class="panel">No, Smart Play APK is designed exclusively for Android devices.</div>
+          </div>
+
+          <div class="acc" aria-expanded="false">
+            <button type="button" class="acc-btn">
+              <span>Do I need to sign up to use Smart Play APK?</span>
+              <span class="ico">+</span>
+            </button>
+            <div class="panel">No account registration is required.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Verdict -->
+  <section id="final">
+    <div class="container">
+      <h2>Final Verdict</h2>
+
+      <div class="cardbox">
+        <div class="prose">
+          <p>
+            Smart Play APK is a convenient entertainment application for Android users who want access to movies, web series, and live TV within a single interface.
+            Its lightweight design, simple navigation, and free accessibility make it suitable for casual streaming.
+          </p>
+
+          <p>
+            However, as a third-party application, users should be mindful of safety practices and understand that content availability and legality may vary.
+            When used responsibly, Smart Play APK can serve as a flexible alternative entertainment solution for Android devices.
+          </p>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="cta-banner">
+            <div>
+              <h3>Get Smart Play APK on Android</h3>
+              <p>Jump to the download section and install in minutes.</p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btn-white navlink" data-target="download" type="button">⬇ Go to Download</button>
+              <button class="btn btn-dark navlink" data-target="install" type="button">Install Steps</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer-bar" role="contentinfo" aria-label="Footer">
+    <div class="footer-row">
+      <!-- Social icons: real site link -->
+      <div class="social" aria-label="Social icons">
+        <a href="https://smartplayofficial.com/" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://smartplayofficial.com/" aria-label="X" title="X" target="_blank" rel="noopener noreferrer">x</a>
+        <a href="https://smartplayofficial.com/" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">▶</a>
+        <a href="https://smartplayofficial.com/" aria-label="Telegram" title="Telegram" target="_blank" rel="noopener noreferrer">t</a>
+      </div>
+
+      <div class="copy">© <span id="yr"></span> Smart Play APK. All rights reserved.</div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const themeBtn = document.getElementById("themeBtn");
+    const body = document.body;
+
+    function setTheme(t){
+      body.setAttribute("data-theme", t);
+      themeBtn.textContent = (t === "light") ? "☀️" : "🌙";
+      localStorage.setItem("theme", t);
+    }
+    const saved = localStorage.getItem("theme");
+    if(saved) setTheme(saved);
+
+    themeBtn.addEventListener("click", () => {
+      const cur = body.getAttribute("data-theme") || "dark";
+      setTheme(cur === "dark" ? "light" : "dark");
+    });
+
+    // Mobile drawer
+    const menuBtn = document.getElementById("menuBtn");
+    const drawer = document.getElementById("drawer");
+    if(menuBtn){
+      menuBtn.addEventListener("click", () => {
+        const open = drawer.style.display === "block";
+        drawer.style.display = open ? "none" : "block";
+      });
+    }
+
+    // Clean URL smooth scroll (no #hash shown)
+    const navButtons = document.querySelectorAll(".navlink");
+    function scrollToId(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.scrollIntoView({behavior:"smooth", block:"start"});
+      history.replaceState(null, "", location.pathname); // keep URL clean
+      if(drawer) drawer.style.display = "none";
+    }
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        if(target) scrollToId(target);
+      });
+    });
+
+    // FAQ accordion (+ / −)
+    const accs = document.querySelectorAll(".acc");
+    accs.forEach(acc => {
+      const btn = acc.querySelector(".acc-btn");
+      const ico = acc.querySelector(".ico");
+      const panel = acc.querySelector(".panel");
+
+      btn.addEventListener("click", () => {
+        const isOpen = acc.getAttribute("aria-expanded") === "true";
+
+        // close others (clean UX)
+        accs.forEach(a => {
+          a.setAttribute("aria-expanded","false");
+          const i = a.querySelector(".ico");
+          const p = a.querySelector(".panel");
+          if(i) i.textContent = "+";
+          if(p) p.style.display = "none";
+        });
+
+        acc.setAttribute("aria-expanded", String(!isOpen));
+        ico.textContent = !isOpen ? "−" : "+";
+        panel.style.display = !isOpen ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
